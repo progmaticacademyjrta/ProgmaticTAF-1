@@ -13,6 +13,8 @@ public class HomePage {
     By headerBy = By.id("top");
     By makeAppointmentButton = By.id("btn-make-appointment");
 
+
+
     public HomePage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
         this.wait = wait;
@@ -32,4 +34,6 @@ public class HomePage {
         Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/profile.php#login");
         System.out.println("'Make Appointment' button is clickable, and the login page is loaded.");
     }
+
+
 }
