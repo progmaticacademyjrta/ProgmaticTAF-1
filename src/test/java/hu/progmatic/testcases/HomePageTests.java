@@ -12,4 +12,10 @@ public class HomePageTests extends DriverBaseTest {
         homePage = new HomePage(driver, wait);
         homePage.loadHomePage();
     }
+    @Test(description = "TC02: The pages loaded and the 'Make Appointment' button is clickable.")
+    public void makeAppointmentButtonIsClickable(){
+        homePage = new HomePage(driver, wait);
+        homePage.loadHomePageWithClickableButton("https://katalon-demo-cura.herokuapp.com/");
+    }
+
 }
