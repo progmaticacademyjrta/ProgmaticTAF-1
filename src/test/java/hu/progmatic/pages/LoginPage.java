@@ -40,14 +40,14 @@ public class LoginPage {
         System.out.println("The login is give error message, the login is not happend.");
 
     }
-    public void goToLoginPageAndGetCorrectPswAndUsername(String User, String Psw){
+    public void goToLoginPageAndGetCorrectPswAndUsername(){
         driver.get("https://katalon-demo-cura.herokuapp.com/profile.php#login");
 
         WebElement usernameInput = driver.findElement(usernameInputField);
-        usernameInput.sendKeys(User);
+        usernameInput.sendKeys("John Doe");
 
         WebElement passwordInput = driver.findElement(passwordInputField);
-        passwordInput.sendKeys(Psw);
+        passwordInput.sendKeys("ThisIsNotAPassword");
 
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));
         WebElement loginButtonClickable = driver.findElement(loginButton);

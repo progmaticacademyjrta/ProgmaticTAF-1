@@ -14,7 +14,7 @@ public class AppointmentPageTest extends DriverBaseTest {
         appointmentPage = new AppointmentPage(driver, wait);
         loginPage = new LoginPage(driver, wait);
 
-        loginPage.goToLoginPageAndGetCorrectPswAndUsername("John Doe", "ThisIsNotAPassword");
+        loginPage.goToLoginPageAndGetCorrectPswAndUsername();
         appointmentPage.goToAppointmentPAgeAndFiledWithCorrectInput("Tokyo", "23/02/2023", "everything gonna be alright");
     }
 
