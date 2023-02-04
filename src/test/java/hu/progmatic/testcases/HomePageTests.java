@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class HomePageTests extends DriverBaseTest {
     HomePage homePage;
-    LoginPage loginPage;
+
 
     @Test(description = "TC01: Homepage loaded test that loads the page and validates whether the header is displayed or not.")
     public void homepageLoadedTest() {
@@ -19,13 +19,5 @@ public class HomePageTests extends DriverBaseTest {
         homePage = new HomePage(driver, wait);
         homePage.loadHomePageWithClickableButton("https://katalon-demo-cura.herokuapp.com/");
     }
-
-    @Test(description = "TC03: Login page testing with invalid username and password.Type any kind of letters, or not, it doesn't mather.")
-    public void invalidPswAndUserNameLoginTest(){
-       loginPage = new LoginPage(driver, wait);
-       loginPage.goToLoginPageAndGetInvalidPswAndUsername("https://katalon-demo-cura.herokuapp.com/profile.php#login", "invalid", "wrong");
-    }
-
-    
 
 }
