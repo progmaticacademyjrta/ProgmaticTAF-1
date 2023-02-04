@@ -20,14 +20,14 @@ public class LoginPage {
         this.driver = driver;
         this.wait = wait;
     }
-    public void goToLoginPageAndGetInvalidPswAndUsername(String url, String wrongUser, String wrongPsw){
+    public void goToLoginPageAndGetInvalidPswAndUsername(String url, String User, String Psw){
         driver.get(url);
 
         WebElement usernameInput = driver.findElement(usernameInputField);
-        usernameInput.sendKeys(wrongUser);
+        usernameInput.sendKeys(User);
 
         WebElement passwordInput = driver.findElement(passwordInputField);
-        passwordInput.sendKeys(wrongPsw);
+        passwordInput.sendKeys(Psw);
 
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));
         WebElement loginButtonClickable = driver.findElement(loginButton);
@@ -40,4 +40,23 @@ public class LoginPage {
         System.out.println("The login is give error message, the login is not happend.");
 
     }
+    public void goToLoginPageAndGetCorrectPswAndUsername(String User, String Psw){
+        driver.get("https://katalon-demo-cura.herokuapp.com/profile.php#login");
+
+        WebElement usernameInput = driver.findElement(usernameInputField);
+        usernameInput.sendKeys(User);
+
+        WebElement passwordInput = driver.findElement(passwordInputField);
+        passwordInput.sendKeys(Psw);
+
+        wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+        WebElement loginButtonClickable = driver.findElement(loginButton);
+        loginButtonClickable.click();
+
+
+        Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/#appointment");
+        System.out.println("The login is complete.");
+
+    }
+
 }
