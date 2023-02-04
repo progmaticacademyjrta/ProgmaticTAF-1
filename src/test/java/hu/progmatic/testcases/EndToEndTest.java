@@ -14,7 +14,8 @@ public class EndToEndTest extends DriverBaseTest {
     HomePage homePage;
     LogOutPage logOutPage;
 
-    @Test(description = "TC06: End to End test, go to the home page, and the login page, login with correct data, than make appointment, and log out.Type city (Tokyo, Seoul, Hongkong), type date 'dd/mm/yyyy' and type comment\"")
+    @Test(groups = {"logout"}, description = "TC06: End to End test, go to the home page, and the login page, login with correct data, than make appointment," +
+            " and log out.Type city (Tokyo, Seoul, Hongkong), type date 'dd/mm/yyyy' and type comment")
     public void endToEndTest(){
         homePage = new HomePage(driver, wait);
         appointmentPage = new AppointmentPage(driver, wait);

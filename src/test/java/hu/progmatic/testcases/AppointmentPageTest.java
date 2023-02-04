@@ -9,7 +9,7 @@ public class AppointmentPageTest extends DriverBaseTest {
     AppointmentPage appointmentPage;
     LoginPage loginPage;
 
-    @Test(description = "TC04: Test the appointment booking page is work excellent. Type city (Tokyo, Seoul, Hongkong), type date 'dd/mm/yyyy' and type comment")
+    @Test(groups = {"login", "appointment"},description = "TC04: Test the appointment booking page is work excellent. Type city (Tokyo, Seoul, Hongkong), type date 'dd/mm/yyyy' and type comment")
     public  void appointmentPageWithCorrectInputTest(){
         appointmentPage = new AppointmentPage(driver, wait);
         loginPage = new LoginPage(driver, wait);

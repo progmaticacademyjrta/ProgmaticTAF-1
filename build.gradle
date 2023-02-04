@@ -17,3 +17,34 @@ dependencies {
 test {
     useTestNG()
 }
+task homeTests(type: Test) { // we define a task with name 'smokeTests'
+    def groups = System.getProperty('groups', 'home')
+    useTestNG() {
+        includeGroups groups
+    }
+}
+
+task loginTests(type: Test) { // we define a task with name 'regressionTests'
+    def groups = System.getProperty('groups', 'login')
+    useTestNG() {
+        includeGroups groups
+    }
+}
+task appointmentTests(type: Test) { // we define a task with name 'regressionTests'
+    def groups = System.getProperty('groups', 'appointment')
+    useTestNG() {
+        includeGroups groups
+    }
+}
+task profileTests(type: Test) { // we define a task with name 'regressionTests'
+    def groups = System.getProperty('groups', 'profile')
+    useTestNG() {
+        includeGroups groups
+    }
+}
+task logoutTests(type: Test) { // we define a task with name 'regressionTests'
+    def groups = System.getProperty('groups', 'logout')
+    useTestNG() {
+        includeGroups groups
+    }
+}
