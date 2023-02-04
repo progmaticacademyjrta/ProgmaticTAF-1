@@ -49,5 +49,7 @@ public class AppointmentPage {
         bookAppointmentButtonIsClickable.click();
 
         Assert.assertEquals(driver.getCurrentUrl(), "https://katalon-demo-cura.herokuapp.com/appointment.php#summary");
+
+        System.out.println("An appointment made with valid inputs.");
     }
 }

@@ -20,4 +20,6 @@ public class HomePageTests extends DriverBaseTest {
         homePage.loadHomePageWithClickableButton("https://katalon-demo-cura.herokuapp.com/");
     }
 
+
+
 }

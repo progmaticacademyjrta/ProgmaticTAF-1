@@ -9,7 +9,7 @@ public class ProfilePageTest extends DriverBaseTest {
     ProfilePage profilePage;
     LoginPage loginPage;
 
-    @Test(description = "")
+    @Test(description = "TC05: Go to the profile page, and check it is correctly loaded.")
     public void profilePageIsLoadedTest(){
         profilePage = new ProfilePage(driver, wait);
         loginPage = new LoginPage(driver, wait);
